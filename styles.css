@@ -1,0 +1,575 @@
+/**
+ * Copyright 2015 Google Inc. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+body {
+  margin: 0;
+  background-color: #424242;
+}
+
+.info-body {
+  background-color: whitesmoke;
+}
+
+/* Disable ugly boxes around images in IE10 */
+a img{
+  border: 0px;
+}
+
+::-moz-selection {
+  background-color: #6ab344;
+  color: #fff;
+}
+
+::selection {
+  background-color: #6ab344;
+  color: #fff;
+}
+
+.iyf-search-box .mdl-textfield__input {
+  color: rgba(0, 0, 0, 0.87);
+}
+
+.iyf-header .mdl-menu__container {
+  z-index: 50;
+  margin: 0 !important;
+}
+
+.mdl-textfield--expandable {
+  width: auto;
+}
+
+.iyf-fab {
+  position: absolute;
+  right: 20%;
+  bottom: -26px;
+  z-index: 3;
+  background: #64ffda !important;
+  color: black !important;
+}
+
+.iyf-mobile-title {
+  display: none !important;
+}
+
+.iyf-logo-image {
+  height: 50px;
+}
+
+.iyf-header {
+  overflow: visible;
+  background-color: white !important;
+}
+
+  .iyf-header .material-icons {
+    color: #767777 !important;
+  }
+
+  .iyf-header .mdl-layout__drawer-button {
+    background: transparent;
+    color: #767777;
+  }
+
+  .iyf-header .mdl-navigation__link {
+    color: #757575;
+    font-weight: 700;
+    font-size: 14px;
+  }
+
+  .iyf-navigation-container {
+    /* Simple hack to make the overflow happen to the left instead... */
+    direction: rtl;
+    order: 1;
+    width: 500px;
+    transition: opacity 0.2s cubic-bezier(0.4, 0, 0.2, 1),
+        width 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .iyf-navigation {
+    /* ... and now make sure the content is actually LTR */
+    direction: ltr;
+    justify-content: flex-end;
+    width: 800px;
+  }
+
+  .iyf-navigation a {
+    color: #444444 !important;
+  }
+
+  .iyf-search-box.is-focused + .iyf-navigation-container {
+    opacity: 0;
+    width: 100px;
+  }
+
+
+  .iyf-navigation .mdl-navigation__link {
+    display: inline-block;
+    height: 60px;
+    line-height: 68px;
+    background-color: transparent !important;
+    border-bottom: 4px solid transparent;
+  }
+
+    .iyf-navigation .mdl-navigation__link:hover {
+      border-bottom: 4px solid #8bc34a;
+    }
+
+  .iyf-search-box {
+    order: 2;
+    margin-left: 16px;
+    margin-right: 16px;
+  }
+
+  .iyf-more-button {
+    order: 3;
+  }
+
+
+.iyf-drawer {
+  border-right: none;
+}
+
+  .iyf-drawer-separator {
+    height: 1px;
+    background-color: #dcdcdc;
+    margin: 8px 0;
+  }
+
+  .iyf-drawer .mdl-navigation__link.mdl-navigation__link {
+    font-size: 14px;
+    color: #757575;
+  }
+
+  .iyf-drawer span.mdl-navigation__link.mdl-navigation__link {
+    color: #8bc34a;
+  }
+
+  .iyf-drawer .mdl-layout-title {
+    position: relative;
+    background: #6ab344;
+    height: 160px;
+  }
+
+  .iyf-drawer .iyf-logo-image {
+    position: absolute;
+    bottom: 16px;
+  }
+
+.iyf-be-together-section {
+  position: relative;
+  height: 500px;
+  width: auto;
+  background-color: #f3f3f3;
+  background: url('images/iyf_oficinas.png') center 30% no-repeat;
+  background-size: cover;
+}
+
+.iyf-descricao-oficinas {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  height: 250px;
+  width: auto;
+  background-color: #424242;
+  font-size: 30px;
+  line-height: 40px;
+  font-family: 'Roboto', 'Helvetica', 'Arial', sans-serif;
+  color: white;
+  padding: 2rem 10rem 2rem 10rem;
+}
+
+.iyf-descricao-oficinas #iyf-descricao-oficinas-long {
+  display: block;
+}
+
+.iyf-oficinas {
+  display: inline-block;
+  width: 160px;
+  margin-right: 32px;
+}
+
+.iyf-oficinas-section-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 500px;
+  padding: 5rem 4rem 5rem 4rem;
+}
+
+.iyf-oficinas-section-info ul {
+  margin-bottom: 3rem;
+}
+
+.iyf-oficinas-section-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  background-size: cover;
+  height: 500px;
+  margin-top: 0.5rem;
+}
+
+.iyf-oficinas-section-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  background-size: cover;
+  height: 500px;
+  margin-top: 0.5rem;
+}
+
+.iyf-oficinas-text {
+  font-size: 20px;
+  font-weight: 200!important;
+}
+
+.iyf-oficinas-section-maquiagem {
+  background: url('images/maquiagem2.png') center top no-repeat;
+  background-color: #daa677;
+}
+
+.iyf-oficinas-section-manicure {
+  background: url('images/manicure.png') center top no-repeat;
+  background-color: #e14385;
+}
+
+.iyf-oficinas-section-espanhol {
+  background: url('images/espanhol.png') center top no-repeat;
+  background-color: #811616;
+}
+
+.iyf-oficinas-section-ingles {
+  background: url('images/ingles2.png') center top no-repeat;
+  background-color: #215990;
+}
+
+.iyf-oficinas-section-japones {
+  background: url('images/japones.png') center top no-repeat;
+  background-color: #0f5231;
+}
+
+.iyf-oficinas-section-coreano {
+  background: url('images/coreano2.png') center top no-repeat;
+  background-color: #8bc34a;
+}
+
+.iyf-oficinas-section-culinaria {
+  background: url('images/exemplo_desktop.png') center top no-repeat;
+}
+
+.iyf-oficinas-band-left {
+  position: absolute;
+  left: 0;
+  width: 50%;
+  text-align: center;
+  /*background-color: #37474f88;*/
+}
+
+.iyf-oficinas-band-right {
+  position: absolute;
+  right: 0;
+  width: 50%;
+  text-align: center;
+  /*background-color: #37474f88;*/
+}
+
+.iyf-oficinas-band-text-left {
+  max-width: 800px;
+  margin-left: 5%;
+  padding: 24px;
+  text-align: left;
+  color: white;
+}
+
+.iyf-oficinas-band-text-right {
+  max-width: 800px;
+  margin-right: 5%;
+  padding: 24px;
+  text-align: right;
+  color: white;
+}
+
+.iyf-oficinas-band-text p {
+  padding-top: 8px;
+}
+
+.iyf-oficinas-band-title {
+  margin-bottom: 2rem;
+}
+
+.iyf-oficinas-band-description {
+  font-size: 1rem !important;
+}
+
+.iyf-link {
+  text-decoration: none;
+  color: #8bc34a !important;
+}
+
+  .iyf-link:hover {
+    color: #7cb342 !important;
+  }
+
+  .iyf-link .material-icons {
+    position: relative;
+    top: -1px;
+    vertical-align: middle;
+  }
+
+.iyf-alt-link {
+  text-decoration: none;
+  color: white !important;
+  font-size: 16px;
+}
+
+.iyf-alt-link:hover {
+  color: #8d8d8d !important;
+}
+
+.iyf-alt-link .material-icons {
+  position: relative;
+  top: 6px;
+}
+
+.iyf-footer {
+  background-color: #fafafa;
+  position: relative;
+}
+
+  .iyf-footer a:hover {
+    color: #8bc34a;
+  }
+
+  .iyf-footer .mdl-mega-footer--top-section::after {
+    border-bottom: none;
+  }
+
+  .iyf-footer .mdl-mega-footer--middle-section::after {
+    border-bottom: none;
+  }
+
+  .iyf-footer .mdl-mega-footer--bottom-section {
+    position: relative;
+  }
+
+  .iyf-footer .mdl-mega-footer--bottom-section a {
+    margin-right: 2em;
+  }
+
+  .iyf-footer .mdl-mega-footer--right-section a .material-icons {
+    position: relative;
+    top: 6px;
+  }
+
+
+.iyf-link-menu:hover {
+  cursor: pointer;
+}
+
+.iyf-footer-div-group {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.iyf-footer-div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  width: 100%;
+}
+
+.iyf-footer-div-siganos {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1rem;
+  width: 100%;
+}
+
+.iyf-footer-map {
+  width: 100%;
+}
+
+.iyf-footer-socialmedia-div {
+  display: flex;
+  margin-left: 1rem;
+}
+
+.iyf-footer-socialmedia-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 3rem;
+  height: 3rem;
+  background-color: #6ab344;
+}
+
+.iyf-footer-socialmedia-btn a {
+  height: 1.5rem;
+}
+
+.iyf-footer-socialmedia-btn a i {
+  font-size: 1.5rem;
+  color: white;
+}
+
+.iyf-footer-info-div {
+  text-align: center;
+}
+
+.iyf-footer-logo {
+  height: 8rem;
+  margin: 1rem 0;
+}
+
+/**** Mobile layout ****/
+@media (max-width: 1200px) {
+  .iyf-navigation-container {
+    display: none;
+  }
+
+  .iyf-title {
+    display: none !important;
+  }
+
+  .iyf-mobile-title {
+    display: block !important;
+  }
+
+  /* WebViews in iOS 9 break the "~" operator, and WebViews in OS X 10.10 break
+     consecutive "+" operators in some cases. Therefore, we need to use both
+     here to cover all the bases. */
+  .android.iyf-search-box.is-focused ~ .iyf-mobile-title,
+  .iyf-search-box.is-focused + .iyf-navigation-container + .iyf-mobile-title {
+    opacity: 0;
+  }
+
+  .iyf-more-button {
+    display: none;
+  }
+
+  .iyf-search-box.is-focused {
+    width: calc(100% - 48px);
+  }
+
+  .iyf-search-box .mdl-textfield__expandable-holder {
+    width: 100%;
+  }
+
+  .iyf-be-together-section {
+    height: 350px;
+  }
+
+  .iyf-slogan {
+    font-size: 26px;
+    margin: 0 16px;
+    padding-top: 24px;
+  }
+
+  .iyf-sub-slogan {
+    font-size: 16px;
+    margin: 0 16px;
+    padding-top: 8px;
+  }
+
+  .iyf-fab {
+    display: none;
+  }
+
+  .iyf-descricao-oficinas {
+    height: 150px;
+  }
+
+  .iyf-descricao-oficinas #iyf-descricao-oficinas-long {
+    display: none;
+  }
+
+  .iyf-descricao-oficinas #iyf-descricao-oficinas-short {
+    display: block;
+  }
+
+  .iyf-oficinas-section-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    left: 0;
+    background-size: cover;
+    background-position: right;
+    height: 500px;
+    margin-top: 0.5rem;
+  }
+
+  .iyf-oficinas-section-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    right: 0;
+    background-size: cover;
+    background-position: left;
+    height: 500px;
+    margin-top: 0.5rem;
+  }
+
+  .iyf-oficinas-band-text {
+    margin-left: 0;
+    padding: 16px;
+  }
+
+  .iyf-oficinas-band-left {
+    position: relative;
+    width: 90%;
+    text-align: center;
+  }
+
+  .iyf-oficinas-band-right {
+    position: relative;
+    width: 90%;
+    text-align: center;
+  }
+
+  .iyf-oficinas-text {
+    display: none;
+  }
+
+  .iyf-oficinas-band-text-left {
+    margin-left: 0;
+    padding: 0;
+    text-align: center;
+  }
+
+  .iyf-oficinas-band-text-right {
+    margin-left: 0;
+    padding: 0;
+    text-align: center;
+  }
+
+  .iyf-footer .mdl-mega-footer--bottom-section {
+    display: none;
+  }
+
+  .iyf-div-footer {
+    width: 80%;
+  }
+}
